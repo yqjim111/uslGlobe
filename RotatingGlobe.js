@@ -4,7 +4,7 @@
 const width = document.documentElement.clientWidth;
 const height = document.documentElement.clientHeight;
 
-const scaleFactor = 0.6;
+const scaleFactor = 0.75;
 const colorLand = '#ffffff';
 const colorWater = '#a4c7db'
 const colorMarker = '#b80000'
