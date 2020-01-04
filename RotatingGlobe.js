@@ -4,7 +4,7 @@
 const width = document.documentElement.clientWidth;
 const height = document.documentElement.clientHeight;
 
-const scaleFactor = 0.7;
+const scaleFactor = 0.6;
 const colorLand = '#ffffff';
 const colorWater = '#a4c7db'
 const colorMarker = '#b80000'
@@ -39,10 +39,10 @@ d3.csv("RotatingGlobe.csv", function(data){
     for(var i = 0; i < data.length; i++){
         coordinates.push(data[i])
     }
-    drawGlobe();    
-    drawGraticule();
-    enableRotation();  
     drawBackground();
+    drawGraticule();
+    drawGlobe();    
+    enableRotation();  
 
 })
 
@@ -121,7 +121,7 @@ function drawGlobe() {
                 .style("stroke", "#888")
                 .style("stroke-width", "1px")
                 .style("fill", (d, i) => colorLand)
-                .style("opacity", "0.9")
+                .style("opacity", "0.8")
                 .attr("transform", "translate(" + translateX + ", "+ translateY + ")");
 
 
@@ -137,8 +137,9 @@ function drawGraticule() {
         .datum(graticule)
         .attr("class", "graticule")
         .attr("d", path)
-        .style("fill", "#fff")
-        .style("stroke", "#ccc")
+        .style("fill", colorWater)
+        .style("stroke", "grey")
+        .style("stroke-width", '0.25px')
         .attr("transform", "translate(" + translateX + ", "+ translateY + ")");
 }
 
