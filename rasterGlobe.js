@@ -165,7 +165,7 @@
               .attr("class", "boundary")
               .merge(boundaries)
               .attr("d", path)
-              .style("stroke", "red")
+              .style("stroke", "#000066")
               .style("stroke-width", "1px")
               // .attr("transform", "translate(" + translateX + ", "+ translateY + ")");
         }
